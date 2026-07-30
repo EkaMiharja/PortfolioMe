@@ -55,11 +55,11 @@ const CardSwap = ({
     easing === 'elastic'
       ? {
           ease: 'elastic.out(0.6,0.9)',
-          durDrop: 2,
-          durMove: 2,
-          durReturn: 2,
-          promoteOverlap: 0.6,
-          returnDelay: 0.05,
+          durDrop: 0.5,
+          durMove: 0.8,
+          durReturn: 1.5,
+          promoteOverlap: 0.2,
+          returnDelay: 0.01,
         }
       : {
           ease: 'power1.inOut',

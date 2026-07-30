@@ -977,14 +977,14 @@ export default function InfiniteMenu({ items = [], scale = 1.0, showOverlay = tr
         <>
           <div
             className={`
-          absolute bottom-8 left-8 bg-white/90 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-slate-100 max-w-[280px] transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
+          absolute bottom-2 left-2 md:bottom-8 md:left-8 bg-white/90 backdrop-blur-sm rounded-2xl p-2 md:p-5 shadow-lg border border-slate-100 max-w-[180px] md:max-w-[280px] transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
           ${isMoving ? 'opacity-0 pointer-events-none translate-y-4' : 'opacity-100 pointer-events-auto translate-y-0'}
         `}
           >
-            <h2 className="text-xl font-bold text-slate-900 mb-1">
+            <h2 className="text-xs md:text-xl font-bold text-slate-900 mb-0.5 md:mb-1">
               {activeItem.title}
             </h2>
-            <p className="text-sm text-slate-500 leading-snug">
+            <p className="hidden md:block text-sm text-slate-500 leading-snug">
               {activeItem.description}
             </p>
             {activeItem.link && (
@@ -992,7 +992,7 @@ export default function InfiniteMenu({ items = [], scale = 1.0, showOverlay = tr
                 href={activeItem.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-indigo-600 hover:text-indigo-700 transition-colors"
+                className="hidden md:inline-flex mt-3 items-center gap-1 text-xs font-medium text-indigo-600 hover:text-indigo-700 transition-colors"
               >
                 Learn more
                 <span className="text-sm">&rarr;</span>

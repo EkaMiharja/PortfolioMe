@@ -39,8 +39,8 @@ const ProjectCard = ({ project }) => (
     {/* Content */}
     <div className="flex flex-col flex-1 p-5 gap-3">
       <div>
-        <h3 className="font-bold text-gray-500 text-base leading-snug mb-1">{project.title}</h3>
-        <p className="text-gray-400 text-sm leading-relaxed line-clamp-3">{project.description}</p>
+        <h3 className="font-bold text-gray-500 text-sm md:text-base leading-snug mb-1">{project.title}</h3>
+        <p className="text-gray-400 text-xs md:text-sm leading-relaxed line-clamp-3">{project.description}</p>
       </div>
 
       {/* Tags */}
@@ -100,26 +100,24 @@ const ProjectsSection = () => {
   const secondProjects = projects.slice(mid);
 
   return (
-    <section id="projects" className="relative pb-32 pt-24 md:pt-24 bg-gray-900 overflow-hidden">
+    <section id="projects" className="relative pb-32 pt-16 md:pt-24 bg-gray-900 overflow-hidden">
       {/* DotField Background */}
       <div className="absolute inset-0 z-0">
-        {typeof document !== 'undefined' && (
-          <DotField
-            dotRadius={1.6}
-            dotSpacing={30}
-            cursorRadius={600}
-            bulgeStrength={80}
-            glowRadius={200}
-            gradientFrom="rgb(21, 89, 157)"
-            gradientTo="rgb(255, 244, 183)"
-            glowColor="#1b263d3b"
-          />
-        )}
+        <DotField
+          dotRadius={1.5}
+          dotSpacing={40}
+          cursorRadius={600}
+          bulgeStrength={60}
+          glowRadius={200}
+          gradientFrom="rgb(21, 89, 157)"
+          gradientTo="rgb(255, 244, 183)"
+          glowColor="#1b263d3b"
+        />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8">
         {/* Section Header */}
-          <div className="text-center mb-20 md:mb-16">
+          <div className="text-center mb-4 md:mb-16">
             <BlurText
               text="Selected Projects"
               delay={60}
@@ -135,15 +133,15 @@ const ProjectsSection = () => {
         </div>
 
         {/* CardSwap */}
-        <div className="flex flex-col gap-40 md:gap-8">
+        <div className="flex flex-col gap-8">
           <div className="flex justify-center lg:justify-start lg:mt-40">
             <div className="max-[480px]:h-[300px] h-[480px] w-full max-w-[460px]">
               <CardSwap
                 cardDistance={isMobile ? 0 : 30}
-                verticalDistance={isMobile ? 40 : 60}
+                verticalDistance={isMobile ? 10 : 60}
                 delay={4000}
                 skewAmount={skew}
-                pauseOnHover={true}
+                pauseOnHover={false}
                 easing="elastic"
                 dropDistance={150}
               >
@@ -159,10 +157,10 @@ const ProjectsSection = () => {
             <div className="max-[480px]:h-[300px] h-[480px] w-full max-w-[460px]">
               <CardSwap
                 cardDistance={isMobile ? 0 : 30}
-                verticalDistance={isMobile ? 40 : 60}
+                verticalDistance={isMobile ? 10 : 60}
                 delay={4500}
                 skewAmount={skew}
-                pauseOnHover={true}
+                pauseOnHover={false}
                 easing="elastic"
                 dropDistance={150}
               >

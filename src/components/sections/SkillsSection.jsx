@@ -51,8 +51,8 @@ const SkillsSection = () => {
           </p>
         </div>
 
-        <div className="w-full h-[500px]">
-          <InfiniteMenu items={menuItems} scale={1.2} showOverlay={true} />
+        <div className="w-full h-[300px] md:h-[500px]">
+          <InfiniteMenu items={menuItems} scale={isMobile ? 1.4 : 1.2} showOverlay={true} />
         </div>
       </div>
     </section>
