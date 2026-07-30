@@ -4,8 +4,14 @@ import BlurText from '../animations/BlurText';
 import LightRays from '../animations/LightRays';
 import { skills } from '../../data/skills';
 
+const skillImages = import.meta.glob('/src/assets/imageskills/*', { eager: true });
+const resolveSkillImage = (id) => {
+  const key = `/src/assets/imageskills/skill${id}.jpg`;
+  return skillImages[key]?.default || null;
+};
+
 const menuItems = skills.map(s => ({
-  image: s.image,
+  image: resolveSkillImage(s.id) || s.image,
   link: s.link,
   title: s.label,
   description: s.description,
