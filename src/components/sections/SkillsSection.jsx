@@ -28,7 +28,7 @@ const SkillsSection = () => {
   }, []);
 
   return (
-    <section id="skills" className="relative pt-24 pb-24 bg-gray-900 overflow-hidden">
+    <section id="skills" className="relative pt-24 pb-32 md:pb-24 bg-gray-900 overflow-hidden">
       {/* LightRays Background */}
       <div className="absolute inset-0 z-0">
         <LightRays
@@ -57,8 +57,8 @@ const SkillsSection = () => {
           </p>
         </div>
 
-        <div className="w-full h-[300px] md:h-[500px]">
-          <InfiniteMenu items={menuItems} scale={isMobile ? 1.4 : 1.2} showOverlay={true} />
+        <div className="w-full h-[580px]">
+          <InfiniteMenu items={menuItems} scale={isMobile ? 1.2 : 1.2} showOverlay={true} />
         </div>
       </div>
     </section>

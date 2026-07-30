@@ -130,7 +130,7 @@ const ProjectsSection = () => {
         </div>
 
         {/* CardSwap */}
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-16 md:gap-8">
           <div className="flex justify-center lg:justify-start lg:mt-40">
             <div className="max-[480px]:h-[300px] h-[480px] w-full max-w-[460px]">
               <CardSwap
@@ -150,7 +150,7 @@ const ProjectsSection = () => {
               </CardSwap>
             </div>
           </div>
-          <div className="flex justify-center lg:justify-end lg:mt-2 lg:mr-20">
+          <div className="flex justify-center lg:justify-end lg:mt-2 lg:mr-20 mb-12 md:mb-0">
             <div className="max-[480px]:h-[300px] h-[480px] w-full max-w-[460px]">
               <CardSwap
                 cardDistance={isMobile ? 0 : 30}
