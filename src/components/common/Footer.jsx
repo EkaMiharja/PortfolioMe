@@ -42,7 +42,7 @@ const Footer = () => {
         {/* Branding */}
         <div className="flex flex-col items-center md:items-start gap-1">
           <span className="font-bold text-white text-lg tracking-tight">Mochamad Eka Miharja</span>
-          <span className="text-gray-400 text-sm"> Informatics Engineering Student</span>
+          <span className="text-gray-400 text-sm"> Tech Enthusiast</span>
         </div>
 
         {/* Social Links */}
